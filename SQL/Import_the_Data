@@ -1,0 +1,47 @@
+BULK INSERT Dim_Date
+FROM 'C:\FinPay\Data\dim_date.csv'
+WITH
+(
+    FORMAT = 'CSV',
+    FIRSTROW = 2,
+    FIELDQUOTE = '"',
+    TABLOCK
+);
+
+GO
+
+BULK INSERT Dim_Customer
+FROM 'C:\FinPay\Data\dim_customer.csv'
+WITH
+(
+    FORMAT = 'CSV',
+    FIRSTROW = 2,
+    FIELDQUOTE = '"',
+    TABLOCK
+);
+
+GO
+
+BULK INSERT Dim_Merchant
+FROM 'C:\FinPay\Data\dim_merchant.csv'
+WITH
+(
+    FORMAT = 'CSV',
+    FIRSTROW = 2,
+    FIELDQUOTE = '"',
+    TABLOCK
+);
+
+GO
+
+BULK INSERT Fact_Transactions
+FROM 'C:\FinPay\Data\Fact_Transactions.csv'
+WITH
+(
+    FORMAT = 'CSV',
+    FIRSTROW = 2,
+    FIELDQUOTE = '"',
+    TABLOCK
+);
+
+GO
